@@ -1,2 +1,5 @@
 # gulp
-前端工作流
+
+
+1、clone版本到本地
+2、运行npm install
