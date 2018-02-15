@@ -1,0 +1,47 @@
+.app.app-punching {
+  .section.section-title {
+    &.title-1{
+      background-color: $bg-color-white;
+      .mui-content-padded{
+        padding: rem(10) rem(10) rem(0) rem(10);
+        margin:rem(0);
+        font-size:$l-font-size;
+        position: relative;
+        /*&:before{
+          position: absolute;
+          top: 0;
+          content: '';
+          -webkit-transform: scaleY(.3);
+          transform: scaleY(.3);
+          background-color: #c8c7cc;
+          height: 0.01rem;
+          left: rem(0);
+          right:rem(0);
+        }*/
+        color: $font-color-black;
+      }
+    }
+    &.title-2{
+      background-color: $bg-color-white;
+      .mui-content-padded{
+        padding:rem(10) rem(10) rem(0) rem(5);
+        margin:rem(0);
+        .create_punching{
+          color:$font-color-blue7;
+          span{
+            font-size:rem(22);
+            font-weight: bold;
+            color:$font-color-blue7;
+            position: relative;
+            top:rem(1);
+          }
+        }
+        .delete_punching{
+          span{
+            font-size:rem(22);
+          }
+        }
+      }
+    }
+  }
+}

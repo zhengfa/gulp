@@ -1,0 +1,351 @@
+.app.app-punching{
+  .section.section-card{
+    &.card-1{
+      display: flex;
+      justify-content:center;
+      background: url("../img/avatar_bg.png");
+      -webkit-background-size: 100% 100%;
+      background-size: 100% 100%;
+      height:rem(180);
+      .avatar{
+        width: 100%;
+        text-align: center;
+        color: $font-color-white;
+        margin-top: rem(45);
+        img{
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          width: rem(70);
+          height:rem(70);
+          @include set-border(rem(2),$border-color-white)
+        }
+      }
+      span{
+        font-size: rem(14);
+      }
+    }
+    &.card-2{
+      margin-bottom: rem(10);
+      background-color: $bg-color-white;
+
+
+      padding:rem(12) rem(0) rem(15);
+      font-size: rem(14);
+      .mui-content-padded{
+        width: 60%;
+        @include margin-center;
+        .mui-btn{
+          margin:rem(0);
+          font-size:rem(14);
+          padding: rem(10) rem(0);
+        }
+        .join-btn{
+          background-color: $bg-color-blue6;
+          color:$font-color-white;
+          @include set-border(rem(1),$bg-color-blue6);
+          margin-bottom: rem(12);
+        }
+        .create-btn{
+          span{
+            font-size:rem(24);
+            position: relative;
+            top:rem(1);
+            color:$font-color-black;
+          }
+        }
+      }
+      .history-link{
+        margin-top: rem(20);
+        span{
+          font-size:rem(16)
+        }
+      }
+      .feedback{
+        margin-top: rem(30);
+      }
+      .follow-tips{
+        margin-top:rem(50);
+      }
+    }
+    &.card-3{
+      background-color: $bg-color-white;
+      .mui-table-view{
+        margin-top: rem(0);
+        &:before{
+          height:rem(0);
+        }
+        &:after{
+          height:rem(0);
+        }
+        .mui-table-view-cell{
+          padding: rem(12) rem(12);
+          &:after{
+            height:rem(1);
+            left:rem(9);
+            right:rem(9);
+            bottom:rem(0);
+          }
+          a{
+            .mui-media-object{
+              width: rem(150);
+              height:rem(100);
+              max-width: inherit;
+            }
+            .mui-media-body{
+              width: rem(185);
+              overflow: auto;
+              white-space:normal;
+              .title{
+                height: rem(38);
+                color:$font-color-black;
+                font-size: $xl-font-size;
+              }
+              .tag{
+                @include set-border(rem(1),$bg-color-orange4);
+                color: $font-color-orange1;
+                display: inline-block;
+                padding: rem(2) rem(4);
+                border-radius: rem(2);
+                margin-top: rem(10);
+                font-size:$s-font-size;
+              }
+              .live{
+                margin-top: rem(10);
+                div{
+                  @include float(left);
+                  font-size:$s-font-size;
+                  margin-right: rem(20);
+                  &:nth-child(1){
+                    @include text-space-line;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &.card-4{
+      background-color: $bg-color-white;
+      .mui-content-padded{
+        margin-bottom: rem(7);
+        padding: rem(10);
+        margin:rem(0);
+        button{
+          width: rem(24.12%);
+          margin-top: rem(10);
+          padding:rem(5) rem(0);
+          font-size:$l-font-size;
+        }
+      }
+    }
+    &.card-5{
+      background-color: $bg-color-white;
+      padding: rem(10) rem(0);
+      .mui-table-view{
+        margin-top: rem(0);
+        &:before{
+          height:rem(0);
+        }
+        &:after{
+          height:rem(0);
+        }
+        .mui-table-view-cell{
+          @include set-border(rem(1),$line-color-light-gray);
+          padding: rem(9) rem(11);
+          margin: rem(0) rem(10) rem(10);
+          display:flex;
+          flex-direction: row;
+          align-items: center;
+          &:after{
+            height:rem(0);
+          }
+          .mui-media-object{
+            width: rem(40);
+            height:rem(40);
+            max-width: inherit;
+            margin-right: rem(10);
+          }
+          .mui-media-body{
+            width: rem(230);
+            overflow: auto;
+            white-space:normal;
+            margin-right: rem(10);
+            .title{
+              color:$font-color-black;
+              font-size:$l-font-size;
+            }
+            .tag{
+              @include set-border(rem(1),$bg-color-orange4);
+              color: $font-color-orange1;
+              display: inline-block;
+              padding: rem(2) rem(4);
+              border-radius: rem(2);
+              margin-top: rem(10);
+              font-size:$s-font-size;
+            }
+            .live{
+              @include float();
+              div{
+                @include float(left);
+                font-size:$s-font-size;
+                margin-right: rem(20);
+                &:nth-child(1){
+                  position: relative;
+                  &:after{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    border-right: rem(1) solid $line-color-light-gray6;
+                    margin-left:rem(10);
+                    height:rem(10);
+                    right:rem(-10);
+                    top:rem(4);
+                  }
+                }
+              }
+            }
+          }
+          .mui-media-option{
+            align-self:center;
+            width: rem(50);
+
+            button{
+              padding: rem(0);
+              font-size:$l-font-size;
+              height: rem(30);
+              width: 100%;
+              background-color: $bg-color-blue6;
+              @include set-border(rem(1),$bg-color-blue6)
+            }
+          }
+        }
+      }
+    }
+    &.card-6{
+      background-color: $bg-color-white;
+      margin-bottom: $space-margin-bottom2;
+        .title-img{
+          position: relative;
+          padding: rem(0);
+          margin:rem(0);
+          img{
+            width: 100%;
+          }
+          .share-link{
+            position: absolute;
+            top:rem(10);
+            right:rem(10);
+            background-color: $bg-color-black7;
+            border-radius: rem(20);
+            padding:rem(3) rem(10) rem(4);
+            color:$font-color-white;
+            opacity: 0.9;
+            .mui-icon{
+              font-size:rem(18);
+            }
+
+          }
+        }
+        .title{
+          font-size:rem(22);
+          color: $font-color-black;
+          line-height: rem(33);
+          letter-spacing: rem(1);
+        }
+        .live{
+          display:flex;
+          margin:rem(0) rem(10);
+          padding-bottom: rem(15);
+          .avatar{
+            display:flex;
+            align-items: center;
+            height:rem(33);
+            width: 25%;
+            img{
+              width: rem(30);
+              height: rem(30);
+              margin-right:rem(-6);
+              border-radius: 50%;
+              @include set-border(rem(2),$bg-color-white);
+            }
+          }
+          .takened{
+            height:rem(33);
+            display:flex;
+            align-items: center;
+            width: 74%;
+            .nickname{
+              font-size: $m-font-size;
+              width: 10%;
+              @include text-wrap;
+            }
+            .num{
+              font-size: $m-font-size;
+                @include text-space-line;
+            }
+            .checked{
+              font-size: $m-font-size;
+              margin-left: rem(20);
+            }
+          }
+        }
+
+    }
+    &.card-7{
+      background-color: $bg-color-white;
+      margin-bottom: $space-margin-bottom2;
+      .mui-content-padded{
+        margin:rem(0);
+        padding:rem(12) rem(10);
+        .title{
+          font-size: $xxxl-font-size;
+          color:$font-color-black;
+          margin-bottom: $space-margin-bottom6;
+        }
+        .content{
+          img{max-width: 100%;}
+        }
+      }
+    }
+    &.card-8{
+      background-color: $bg-color-white;
+      margin-bottom: $space-margin-bottom2;
+      .mui-content-padded{
+        margin:rem(0);
+        padding:rem(12) rem(12);
+        .title{
+          font-size: $xxxl-font-size;
+          color:$font-color-black;
+          margin-bottom: $space-margin-bottom6;
+        }
+        .author{
+          display:flex;
+          align-items: center;
+          margin-bottom: $space-margin-bottom2;
+          .avatar{
+            img{
+              width:rem(40);
+              height:rem(40);
+              border-radius: 50%;
+            }
+          }
+        }
+        .content{
+          height: rem(60);
+          overflow: hidden;
+          img{max-width: 100%;}
+        }
+        .more{
+          color:$font-color-blue7;
+          margin-top:rem(5);
+          span{
+            color:$font-color-blue7;
+            font-size:rem(18);
+          }
+        }
+      }
+    }
+  }
+}

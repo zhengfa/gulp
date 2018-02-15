@@ -1,0 +1,79 @@
+.app.app-punching {
+  .section.section-button{
+    &.button-1{
+      background-color: $bg-color-white;
+      padding-top: rem(20);
+      .mui-content-padded{
+        margin:rem(0) rem(10);
+        button{
+          background-color: $bg-color-white;
+          color: $font-color-blue7;
+          @include set-border(rem(1),$bg-color-blue6);
+          padding: rem(10) rem(0);
+          margin-bottom: rem(0);
+
+        }
+      }
+    }
+    &.button-2{
+      background-color: $bg-color-white;
+      .mui-content-padded{
+        margin:rem(0) rem(10);
+        padding:rem(30) rem(0);
+        button{
+          width: 70%;
+          @include margin-center;
+          background-color: $bg-color-blue7;
+          color:$font-color-white;
+          @include set-border(rem(1),$bg-color-blue7);
+          padding: rem(8) rem(0);
+          margin-bottom: rem(0);
+        }
+      }
+    }
+    &.button-3 {
+      position: fixed;
+      bottom: rem(0);
+      display:flex;
+      button{
+        @include margin-center;
+        color:$font-color-white;
+        @include set-border(rem(1),$bg-color-blue7);
+        padding: rem(12) rem(0);
+        margin-bottom: rem(0);
+        border-radius: 0;
+      }
+      .enroll-btn{
+        height:rem(53);
+        width: 86.66666666666667%;
+        background-color: $bg-color-blue7;
+      }
+      .report-btn{
+        height:rem(53);
+        width: rem(53);
+        background-color: $bg-color-blue8;
+        i{
+          color: $font-color-white;
+          font-size:rem(18);
+          font-weight: normal;
+        }
+      }
+      .report-pop{
+        position: absolute;
+        right:rem(7);
+        top:rem(-93);
+        button{
+          background-color: $bg-color-black;
+          @include set-border(rem(1),$bg-color-black);
+          padding:rem(10) rem(12);
+          -webkit-border-radius: rem(3);
+          -moz-border-radius: rem(3);
+          border-radius: rem(3);
+          font-size:rem($s-font-size);
+          margin-bottom: $space-margin-bottom;
+          opacity:0.8;
+        }
+      }
+    }
+  }
+}

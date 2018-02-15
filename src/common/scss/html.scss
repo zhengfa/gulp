@@ -1,0 +1,124 @@
+html {
+  font-size: 100px;
+}
+
+@each $screen-width in $screen-width-list {
+  @media screen and (min-width: #{$screen-width}px) and (min-height: #{$screen-width}px) {
+    html {
+      font-size: screen-font-size($screen-width, $screen-font-size-percent)
+    }
+  }
+}
+
+body {
+  font-family: $font-family-base;
+  /*background-color: $bg-color-white;*/
+  font-size: $l-font-size;
+  color: $font-color-black3;
+  line-height: normal;
+}
+
+* {
+  font-size: $l-font-size;
+  letter-spacing: 0px;
+}
+
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+//触摸激活效果
+a {
+  &:not(.opacity) {
+    &:active {
+      background-color: $bg-color-light-gray;
+    }
+  }
+  &:active {
+    &.opacity {
+      &.opacity-1 {
+        opacity: 0.1;
+      }
+      &.opacity-2 {
+        opacity: 0.2;
+      }
+      &.opacity-3 {
+        opacity: 0.3;
+      }
+      &.opacity-4 {
+        opacity: 0.4;
+      }
+      &.opacity-5 {
+        opacity: 0.5;
+      }
+      &.opacity-6 {
+        opacity: 0.6;
+      }
+      &.opacity-7 {
+        opacity: 0.7;
+      }
+      &.opacity-8 {
+        opacity: 0.8;
+      }
+      &.opacity-9 {
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+p {
+  text-align: justify;
+  font-size: $l-font-size;
+  margin-top: 0;
+  margin-bottom: $margin-bottom-p;
+  color: $font-color-light-gray;
+}
+
+span {
+  font-size: $l-font-size;
+  color: $font-color-light-gray;
+}
+
+b {
+  font-size: $l-font-size;
+  font-weight: normal;
+  color: $font-color-black;
+}
+
+strong {
+  font-size: $xl-font-size;
+  font-weight: normal;
+  color: $font-color-black;
+}
+
+em, i {
+  font-style: normal;
+  font-size: $m-font-size;
+  color: $font-color-orange;
+  &.red {
+    color: $font-color-red;
+  }
+}
+
+a, a:active, a:hover, a:visited {
+  text-decoration: none;
+  border: none;
+  outline: 0;
+  color: inherit;
+}
+
+input, input[type=search], input[type=text], textarea, select, button {
+  font-size: $l-font-size;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder,
+input:-moz-placeholder, textarea:-moz-placeholder,
+input::-moz-placeholder, textarea::-moz-placeholder,
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  text-align: left;
+  //padding-left: rem(9);
+}

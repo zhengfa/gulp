@@ -1,0 +1,83 @@
+.app.app-punching {
+  .section.section-form {
+    &.form-1{
+      background-color: $bg-color-white;
+      .mui-content-padded{
+        margin: rem(0) rem(10) rem(10);
+        .title{
+          @include form-title;
+        }
+      }
+    }
+    &.form-2{
+      background-color: $bg-color-white;
+      padding-bottom: rem(1);
+      margin-bottom: rem(10);
+      .mui-content-padded{
+        margin: rem(0) rem(10) rem(10);
+        .title{
+          @include form-title;
+        }
+        .mui-radio{
+          input[type='radio']{
+            left:rem(0);
+            &:before{
+              font-size:rem(24);
+              color:$font-color-blue7;
+            }
+          }
+          label{
+            padding-left: rem(30);
+          }
+        }
+        .time-range{
+          &:before{
+            height:rem(0);
+          }
+          &:after{
+            height:rem(0);
+          }
+          padding-left:rem(30);
+          .mui-input-row{
+            height: rem(35);
+            &:after{
+              height:rem(0);
+            }
+            label{
+              width: 22%;
+              height:rem(35);
+              padding: rem(0);
+              line-height: rem(35);
+            }
+            input{
+              width: 78%;
+              height:rem(35);
+            }
+          }
+        }
+      }
+    }
+    &.form-3{
+      background-color: $bg-color-white;
+      padding-bottom: rem(30);
+      .mui-table-view{
+        &:before{
+          height: rem(0);
+        }
+        .title{
+          @include form-title;
+        }
+        .mui-table-view-cell{
+          padding: rem(15) rem(10);
+          .mui-switch-blue{
+            &.mui-active{
+             background-color: $bg-color-blue6;
+              border-color: $bg-color-blue6;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,255 @@
+@charset "UTF-8";
+//-----------------------------------------------------
+// setting scss
+//-----------------------------------------------------
+
+// 开关设置
+//-----------------------------------------------------
+$lte7:                        false !default; //是否兼容ie6-7
+$filter:                      false !default; //是否为ie6-8开启css3滤镜兼容，常用于渐变背景
+$extend:                      false !default; //是否默认启用extend
+
+//适配屏幕宽度
+$screen-width-list:           320, 360, 375, 400, 414, 440, 480, 520, 560, 600, 640, 680, 720, 750, 760, 800, 960 !default;
+//默认UI设计尺寸
+$ui-design-width-default:     750 !default;
+//UI设计尺寸，支持在单个文件里修改
+$ui-design-width:             $ui-design-width-default;// 没有 !default，在单个文件里修改之后，其他文件引入此文件，强制恢复默认值
+//默认设备像素比
+$device-pixel-ratio-default:  2 !default;
+//设备像素比
+$device-pixel-ratio:          $device-pixel-ratio-default;// 没有 !default，在单个文件里修改之后，其他文件引入此文件，强制恢复默认值
+//默认屏幕宽度
+$screen-width-default:        $ui-design-width / $device-pixel-ratio !default;
+//默认字体大小
+$font-size-default:           16 !default;
+//默认屏幕宽度时，1rem字体大小
+//$rem-size-default:            58.59375 !default;
+$rem-size-default:            100 !default;
+//是否支持浏览器改字体大小
+$screen-font-size-percent:    true !default; // true : 支持浏览器改字体 ; false : 不支持浏览器改字体
+
+
+//字体
+$font-family-base:            "Microsoft YaHei","微软雅黑", "Hiragino Sans GB",   sans-serif !default;
+$xxs-font-size:               rem(10px) !default;
+$xs-font-size:                rem(11px) !default;
+$s-font-size:                 rem(12px) !default;
+$m-font-size:                 rem(13px) !default;
+$l-font-size:                 rem(14px) !default;
+$xl-font-size:                rem(15px) !default;
+$xxl-font-size:               rem(16px) !default;
+$xxxl-font-size:              rem(17px) !default;
+$xxxxl-font-size:             rem(18px) !default;
+
+//背景
+//白
+$bg-color-white: #ffffff !default;
+//烟白
+$bg-color-smoke-white: #f6f6f6 !default;
+//深橙
+$bg-color-orange: #ffa10d !default;
+$bg-color-orange2: #f39900 !default;
+$bg-color-orange3: #ffc887 !default;
+$bg-color-orange4: #f90 !default;
+//黑
+$bg-color-black: #333333 !default;
+$bg-color-black2: #4d4d4d !default;
+$bg-color-black3: #000000 !default;
+$bg-color-black4: #24292c !default;
+$bg-color-black5: #040404 !default;
+$bg-color-black6: #313131 !default;
+$bg-color-black7: #000000 !default;
+
+//浅灰
+$bg-color-light-gray: #ededed !default;
+$bg-color-yellow1: #f2ffc6 !default;
+//灰
+$bg-color-gray: #d7d7d7 !default;
+$bg-color-gray2: #f5f5f5 !default;
+$bg-color-gray3: #d9dada !default;
+$bg-color-gray4: #fafafa !default;
+$bg-color-gray5: #eeeeee !default;
+$bg-color-gray6: #f7f7f7 !default;
+$bg-color-gray7: #666666 !default;
+$bg-color-gray8: #f9f9f9 !default;
+$bg-color-gray9: #d9d9d9 !default;
+$bg-color-gray10: #e7e6eb !default;
+$bg-color-gray11:#171717 !default;
+$bg-color-gray12: #9e9e9e !default;
+$bg-color-gray13: #cccccc !default;
+//红
+$bg-color-red: #f71e4b !default;
+$bg-color-red2: #ff616a !default;
+$bg-color-red3: #f64243 !default;
+$bg-color-red4: #ff5a7a !default;
+$bg-color-red5: #a11b28 !default;
+$bg-color-red6: #82141c !default;
+
+//蓝
+$bg-color-blue: #74a5fd !default;
+$bg-color-blue6: #29c7a2 !default;
+//蓝2
+$bg-color-blue2: #5aaddf !default;
+$bg-color-blue3: #5DBCFF !default;
+$bg-color-blue4: #009dd2 !default;
+$bg-color-blue5: #004394 !default;
+$bg-color-blue7:#1DACA9 !default;
+$bg-color-blue8:#0A9794 !default;
+
+//文字
+//深橙
+$font-color-orange: #ffa10d !default;
+$font-color-orange1: #f90 !default;
+$font-color-orange2: #f66809 !default;
+
+//黑
+$font-color-black: #333333 !default;
+$font-color-black2: #161616 !default;
+$font-color-black3: #656565 !default;
+$font-color-black4: #222222 !default;
+//灰
+$font-color-gray: #666666 !default;
+$font-color-gray2: #8b8b8b!default;
+$font-color-gray3: #fbf9fa !default;
+$font-color-gray4: #676767 !default;
+$font-color-gray5: #f0f0f0 !default;
+//浅灰
+$font-color-light-gray: #999999 !default;
+$font-color-light-gray2: #bbbbbb !default;
+$font-color-light-gray3: #aaaaaa !default;
+$font-color-light-gray4: #9a9a9a !default;
+$font-color-light-gray5: #cbcbcb !default;
+$font-color-light-gray6: #9d9d9d !default;
+$font-color-light-gray7: #e9e9e9 !default;
+$font-color-light-gray8: #696969 !default;
+//红色
+$font-color-red: #f53d47 !default;
+$font-color-red2: #ef4949 !default;
+$font-color-red3: #ff2146 !default;
+$font-color-red4: #ff2247 !default;
+$font-color-red5: #ff2b2b !default;
+$font-color-red6: #ff212b !default;
+$font-color-red7: #ff244a !default;
+$font-color-red8: #fc4643 !default;
+$font-color-red9: #ff617d !default;
+$font-color-red10: #80161a !default;
+$font-color-red11: #f53d47 !default;
+//白色
+$font-color-white: #ffffff !default;
+//蓝
+$font-color-blue: #56acdb !default;
+$font-color-blue2: #6898b2 !default;
+$font-color-blue5: #28cbb5 !default;
+$font-color-blue6: #4e8cee !default;
+$font-color-blue7:#06C1AE !default;
+//蓝3
+$font-color-blue3: #74a5fd !default;
+$font-color-blue4: #167efd !default;
+$font-color-yellow1 : #cfcd48 !default;
+
+
+
+$border-color-gray: #e5e5e5 !default;
+$border-color-gray2: #cdcdcd !default;
+$border-color-gray3: #dfdfdf !default;
+$border-color-gray4: #2ac9a3 !default;
+$border-color-gray5: #76a5fd !default;
+$border-color-yellow1: #ebe424 !default;
+$border-color-white:#ffffff !default;
+//小图标
+//深橙
+$icon-color-orange: #ffa10d !default;
+//蓝绿
+$icon-color-blue: #60d4e1 !default;
+//大红
+$icon-color-red: #dd1111 !default;
+//橙红
+$icon-color-salmon-pink: #ff6655 !default;
+$icon-color-salmon-pink2: #fe6060 !default;
+$icon-color-salmon-pink3: #f66707 !default;
+//绿
+$icon-color-green: #9cde56 !default;
+$icon-color-green2: #4bd865 !default;
+//淡紫
+$icon-color-light-purple: #8f97e8 !default;
+//紫色
+$icon-color-purple: #c06fd8 !default;
+//黄
+$icon-color-yellow:#f76808 !default;
+$icon-color-yellow2: #fea932 !default;
+$icon-color-yellow3:#f4ffd7 !default;
+$progress-color-red-0: #fea3a2 !default;
+$progress-color-red-70: #fea3a2 !default;
+$progress-color-red-100: #fea3a2 !default;
+$font-color-yellow: #f6a800 !default;
+$font-color-yellow2: #fff000 !default;
+
+//按钮
+$button-color-default: #fbcb81 !default;
+//深橙
+$button-color-orange: #ffa10d !default;
+$button-color-red: #ee2020 !default;
+$button-color-green: #53b949 !default;
+$button-color-white: #ffffff !default;
+$button-color-default-disabled: #bdbdbd !default;
+$button-border-radius: rem(15px) !default;
+
+//深绿
+$button-color-green1: #02b099 !default;
+$button-color-green2: #28cbb5 !default;
+
+//线条
+//浅灰
+$line-color-light-gray: #ededed !default;
+$line-color-light-gray2: #e5e5e5 !default;
+$line-color-light-gray3: #eaeaea !default;
+$line-color-light-gray4: #bcbcbc !default;
+$line-color-light-gray5: #dddddd !default;
+$line-color-light-gray6: #999 !default;
+$line-color-light-gray7: #c8c7cc !default;
+
+//$line-color-light-gray: red !default;
+//灰
+$line-color-gray: #d7d7d7 !default;
+//烟白
+$line-color-smoke-white: #f6f6f6 !default;
+//$line-height: rem(1px) !default;
+//$line-width: rem(1px) !default;
+//$border-line: rem(1px) !default;
+
+//咖啡色
+$font-color-coffee: #db9220 !default;
+
+//颜色设置
+$bg-color-bg1: #ffffff !default;
+$bg-color-bg2: #000000 !default;
+$bg-color-bg3: #f6ff00 !default;
+$bg-color-bg4: #e60e0e !default;
+$bg-color-bg5: #383191 !default;
+$bg-color-bg6: #00d8f8 !default;
+$bg-color-bg7: #485c5d !default;
+$bg-color-bg8: #42bf89 !default;
+
+$line-height: 1px !default;
+$line-width: 1px !default;
+$border-line: 1px !default;
+
+$header-height: rem(52px) !default;
+$footer-height: rem(52px) !default;
+
+$margin-bottom-p: rem(6px) !default;
+$margin-bottom-p-last-child: rem(2px) !default;
+
+$padding-row-top-bottom-default: rem(11px) !default;
+
+
+$space-margin-bottom:rem(8);
+$space-margin-bottom1:rem(9);
+$space-margin-bottom2:rem(10);
+$space-margin-bottom3:rem(11);
+$space-margin-bottom4:rem(12);
+$space-margin-bottom5:rem(13);
+$space-margin-bottom6:rem(14);
+$space-margin-bottom7:rem(15);
+$space-margin-bottom8:rem(16);
