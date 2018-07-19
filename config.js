@@ -8,6 +8,11 @@ module.exports = {
             "check":true,
             "name":"punching",
             "framework":"mui"
+        },
+        {
+            "project_name":"恒茂停车",
+            "check":true,
+            "name":"hengmaoParking",
         }
     ]
 }

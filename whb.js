@@ -46,10 +46,15 @@ export function import_assets(module){
             gulp.src(config.src + '/framework/' + module.framework + '/' + (config.debug ? 'debug' : 'release') + '/**/')
                 .pipe(gulp.dest(config.dist + '/module/' + module.name + '/assets/' + module.framework +'/' ));
         }
+        //拷贝js
         gulp.src([config.src + '/common/js/*.js',config.src + '/module/' + module.name + '/assets/js/*.*'])
             .pipe(gulp.dest(config.dist + '/module/' + module.name + '/assets/js/'));
+        //拷贝图片
         gulp.src([config.src + '/module/' + module.name + '/assets/img/*.*', config.src + '/common/img/*.*'])
             .pipe(gulp.dest(config.dist + '/module/' + module.name + '/assets/img/'));
+        //拷贝字体
+        gulp.src([config.src + '/module/' + module.name + '/assets/fonts/*.*', config.src + '/common/fonts/*.*'])
+            .pipe(gulp.dest(config.dist + '/module/' + module.name + '/assets/fonts/'));
         resolve('静态文件导入完成...');
     })
 }

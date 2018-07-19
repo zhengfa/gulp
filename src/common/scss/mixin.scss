@@ -17,6 +17,7 @@ $screen-width:屏幕宽度
 $ui-design-width-default: ui默认尺寸  750设计图
 $device-pixel-ratio: 像素倍数2
 
+div的宽度为750设计的1/2，设计图款式100，那么rem(50即可)
 
  */
 @function screen-font-size($screen-width, $percent : true) {
@@ -45,38 +46,38 @@ $device-pixel-ratio: 像素倍数2
 
 //设置边框
 @mixin set-border($width,$color) {
-    border:solid $width $color;
+  border: solid $width $color;
 }
 
-@mixin margin-center{
-  margin:0 auto;
+@mixin margin-center {
+  margin: 0 auto;
 }
 
-@mixin float($float:left){
+@mixin float($float:left) {
   float: $float;
 }
 
-@mixin form-title{
+@mixin form-title {
   padding: rem(10) rem(0);
-  color:$font-color-black;
+  color: $font-color-black;
 }
 
-@mixin text-wrap{
+@mixin text-wrap {
   overflow: hidden;
-  text-overflow:ellipsis;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-@mixin text-space-line(){
+@mixin text-space-line() {
   position: relative;
-  &:after{
+  &:after {
     content: '';
     display: block;
     position: absolute;
     border-right: rem(1) solid $line-color-light-gray5;
-    margin-left:rem(10);
-    height:rem(10);
-    right:rem(-10);
-    top:rem(4);
+    margin-left: rem(10);
+    height: rem(10);
+    right: rem(-10);
+    top: rem(4);
   }
 }
